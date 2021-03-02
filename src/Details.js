@@ -1,21 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 
-export default function Details(props) {
-    const { photo, date, explanation } = props
-    const [photos, setPhoto] = useState([])
+export default function Details() {
+    const [details, setDetails] = useState([])
 
     useEffect(() => {
-      console.log('making an api request!')
-      axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-        .then(response => console.log(response.data))
-        .catch(err => console.log(err))
-    }, [])
+        console.log('calling the api photo!')
+        axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+          .then(({data}) => setDetails(data))
+          .catch(err => console.log(err))
+      }, [])
+    // useEffect(() => {
+    //   console.log('calling the api date')
+    //   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    //     .then(({data}) => setDate(data.date))
+    //     .catch(err => console.log(err))
+    // }, [])
+    // useEffect(() => {
+    //   console.log('calling the api explanation!')
+    //   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    //     .then(({data}) => setExplanation(data.explanation))
+    //     .catch(err => console.log(err))
+    // }, [])
+
 
     return (
-        <div>
-            <img>{photo}</img>
-            <h2>Date: {}</h2>
+        <div className="container">
+            <span >{details.photo}</span>
+            <h4>Date: {details.date}</h4>
+            <p>{details.explanation}</p>
 
         </div>
 

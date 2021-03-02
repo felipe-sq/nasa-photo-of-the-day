@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import axios from 'axios'
+import axios from 'axios'
 import "./App.css";
 import Details from "./Details"
 
@@ -19,6 +19,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
+      <Details />
     </div>
   );
 }
