@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import "./App.css";
+import "./styles.less"
 import Details from "./Details"
 
 function App() {
