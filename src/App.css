@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-size: calc(7px + 2vmin)
 }
 
 .App-logo {
@@ -36,8 +37,14 @@
   justify-content: center;
   margin: 30px 90px 20px;
   padding: 20px 40px 30px;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white
+}
+
+.p-text {
+  font-size: calc(2px + 2vmin);
+  display: flex;
+  flex-direction: column;
 }
 
 .img-container {
