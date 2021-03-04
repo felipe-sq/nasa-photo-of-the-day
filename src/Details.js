@@ -17,37 +17,31 @@ export default function Details() {
       }, [details])
 
     return (
-        <div className="container">
+        <PicContainer>
             <h2>{details.title}</h2>
-            <div className="img-container">
+            <ImgContainer>
                 <img src={details.url} alt="NASA pic of the day" border='5px solid'></img>
-            </div>
+            </ImgContainer>
             <h4>Date: {details.date}</h4>
             <p className="p-text">Description: {details.explanation}</p>
-        </div>
+        </PicContainer>
 
     )
 }
 
 const PicContainer = styled.div`
-    
+    border: 1px solid rgb(228, 42, 42);
+    background-color: dodgerblue;
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px 8px 12px 16px;
 `;
 
-// .container {
-//     border: 1px solid rgb(228, 42, 42);
-//     background-color: dodgerblue;
-//     box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
-//     border-radius: 8px;
-//     margin: 16px;
-//     padding: 16px 8px 12px 16px;
-//   }
-//   .img-container {
-//     background-color: aqua;
-//     width: 60%;
-//     display: flex;
-//     justify-content: space-between;
-//     margin: 4px 0 4px 0;
-//   }
-//   button {
-//     border-radius: 4px;
-//   }
+const ImgContainer = styled.div`
+    background-color: aqua;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0 4px 0;  
+`;
