@@ -11,7 +11,7 @@ export default function Details() {
         axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
           .then(({data}) => setDetails(data))
           .catch(err => console.log(err))
-      }, [])
+      }, [details])
 
     return (
         <div className="container">
