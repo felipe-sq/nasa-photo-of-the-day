@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-size: calc(7px + 2vmin)
 }
 
 .App-logo {
@@ -28,6 +29,35 @@
   color: #61dafb;
 }
 
+.container {
+  background-color: midnightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 90px 20px;
+  padding: 20px 40px 30px;
+  font-size: calc(5px + 2vmin);
+  color: white
+}
+
+.p-text {
+  font-size: calc(2px + 2vmin);
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  background-color: rgba(255, 255, 255, 0.692);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0px;
+  max-width: 90%;
+  height: 75%;
+  color: black
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +66,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+

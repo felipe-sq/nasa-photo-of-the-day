@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import Details from "./Details"
+import styled from 'styled-components'
 
 function App() {
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    <AppDiv>
+      <h1>Enjoy the NASA Photo of the Day!</h1>
+      <Details />
+    </AppDiv>
   );
 }
 
 export default App;
+
+const AppDiv = styled.div`
+  text-align: center;
+  font-size: calc(7px + 2vmin)
+`;
