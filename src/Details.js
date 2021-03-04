@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import styled from 'styled-components'
 
-// import './styles.less'
-// attempted to use less for styling but was not successful -- this was 
-// prior to the module 4 assignment work.
+// added styled components for Module 4 project
 
 export default function Details() {
     const [details, setDetails] = useState([])
@@ -20,7 +18,7 @@ export default function Details() {
         <PicContainer>
             <h2>{details.title}</h2>
             <ImgContainer>
-                <img src={details.url} alt="NASA pic of the day" border='5px solid'></img>
+                <img src={details.url} alt="NASA pic of the day"></img>
             </ImgContainer>
             <h4>Date: {details.date}</h4>
             <p className="p-text">Description: {details.explanation}</p>
@@ -30,7 +28,11 @@ export default function Details() {
 }
 
 const PicContainer = styled.div`
-    border: 1px solid rgb(228, 42, 42);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid midnightblue;
     background-color: dodgerblue;
     box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
     border-radius: 8px;
@@ -39,9 +41,11 @@ const PicContainer = styled.div`
 `;
 
 const ImgContainer = styled.div`
-    background-color: aqua;
-    width: 60%;
     display: flex;
-    justify-content: space-between;
-    margin: 4px 0 4px 0;  
+    flex-direction: column;
+    border: 2px solid midnightblue;
+    border-radius: 8px;
+    background-color: aqua;
+    width: auto;
+    margin: 4px 10px 4px 10px;  
 `;
