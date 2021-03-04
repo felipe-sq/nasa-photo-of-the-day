@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
+import styled from 'styled-components'
+
 // import './styles.less'
 // attempted to use less for styling but was not successful -- this was 
 // prior to the module 4 assignment work.
@@ -26,3 +28,26 @@ export default function Details() {
 
     )
 }
+
+const PicContainer = styled.div`
+    
+`;
+
+// .container {
+//     border: 1px solid rgb(228, 42, 42);
+//     background-color: dodgerblue;
+//     box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+//     border-radius: 8px;
+//     margin: 16px;
+//     padding: 16px 8px 12px 16px;
+//   }
+//   .img-container {
+//     background-color: aqua;
+//     width: 60%;
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 4px 0 4px 0;
+//   }
+//   button {
+//     border-radius: 4px;
+//   }
