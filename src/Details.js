@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 // import './styles.less'
-// attempted to use less for styling but was not successful
+// attempted to use less for styling but was not successful -- this was 
+// prior to the module 4 assignment work.
 
 export default function Details() {
     const [details, setDetails] = useState([])
